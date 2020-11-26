@@ -24,7 +24,7 @@ body {
   font-weight: 400; }
 
 .heading-2 {
-  font-size: 5.5rem;
+  font-size: 4.5rem;
   line-height: 1;
   font-style: italic; }
   .heading-2--light {
@@ -33,7 +33,7 @@ body {
     color: #b28451; }
 
 .heading-3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase; }
   .heading-3--light {
     color: #c69963; }
@@ -142,7 +142,7 @@ body {
   justify-items: start; }
 
 .story__text {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-style: italic;
   font-family: "Josefin Sans", sans-serif;
   margin-bottom: 4rem;
@@ -195,7 +195,8 @@ body {
       margin-right: 1rem; }
 
 .btn-full {
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  font-size: 1.4rem; }
 
 .gallery {
   background-color: #54483a;
