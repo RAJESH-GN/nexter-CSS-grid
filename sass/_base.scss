@@ -14,6 +14,11 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+//Responsive design breakpoints
+$screen-lg: 75em; // 1200px/16
+$screen-md: 62.5em; // 1000px/16
+$screen-sm: 56.25em; //900px/16
+
 *,
 *::before,
 *::after {
@@ -25,6 +30,9 @@ $font-display: "Josefin Sans", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @media only screen and (max-width: $screen-lg) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -41,4 +49,19 @@ body {
     [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end];
   //usually we take a grid of 8/12/16 so screen size/8 i.e 1140/8=140px
+
+  @media only screen and (max-width: $screen-md) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  @media only screen and (max-width: $screen-sm) {
+    grid-template-rows: 6rem 80vh min-content min-content min-content min-content repeat(
+        3,
+        min-content
+      );
+  }
 }
